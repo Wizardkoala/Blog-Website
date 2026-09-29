@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+
+{% block body %}
+    <h2>Register</h2>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    <form method="POST" action="{{ url_for('signup') }}">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="password">Password (at least 8 characters)</label>
+        <input id="password" type="password" name="password" minlength="8" required>
+
+        <button type="submit">Register</button>
+    </form>
+    <p><a href="{{ url_for('login') }}">Log in</a> instead</p>
+{% endblock %}

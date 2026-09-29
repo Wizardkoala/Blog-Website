@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css/styles.css') }}">
+    <title>Current Time:</title>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1 style="font-family:'Times New Roman', Times, serif;">Sidney's Blog</h1>
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a> |
+                <a href="{{ url_for('profile') }}">Profile</a> |
+                <a href="{{ url_for('table') }}">Contact</a> |
+                {% if session.get('email') %}
+                    <span>{{ session['email'] }}</span>
+                    <form action="{{ url_for('logout') }}" method="post" style="display: inline;">
+                        <button type="submit">Log out</button>
+                    </form>
+                {% else %}
+                    <a href="{{ url_for('signup') }}">Register</a> |
+                    <a href="{{ url_for('login') }}">Log in</a>
+                {% endif %}
+            </nav>
+        </center>
+
+    </div>
+  
+{%block body%}{%endblock%} 
+</body>
+<body>
+<footer class="footer">
+    {% if time_variable is defined %}
+        <h4>Current time: {{ time_variable.strftime('%Y-%m-%d %H:%M:%S') }}</h4>
+    {% endif %}
+</footer>
+</body>   
+</html>

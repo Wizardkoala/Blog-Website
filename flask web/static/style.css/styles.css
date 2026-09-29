@@ -1,0 +1,28 @@
+/* --------------- Background image -------------- */ 
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --------------- Background image -------------- */ 
+
+
+
+/*Contact.html header */
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    display: block;
+}

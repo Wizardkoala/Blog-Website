@@ -1,0 +1,39 @@
+{% extends "template.html" %} {% block body %}
+<!DOCTYPE html>
+<html>
+
+<head> 
+
+<h2>Home Page</h2>
+
+
+</head> 
+<body>
+
+<style>
+.blog-section {
+  background-color: rgba(128,128, 128, 0.5);
+  width: 200px;
+  padding: 50px;
+  margin: 40px;
+  float: right; /* I wanted this section to be on the right
+                    side of the page */
+}
+</style>
+
+<section class="blog-section" aria-labelledby="blog-section-heading">
+  <h3 id="blog-section-heading">Table of Contents</h3>
+  <p><b>About me:</b><br>Hello! My names Sidney Woodhouse, I am from Idaho and love 
+    to travel. I am in the process of making this website. <br></p>
+  <h5>Search this Blog</h5>
+  <form action="/account" method="POST">
+  <input type="text" name="name" id="name" placeholder="Type here.." class="form-feild"><br>
+  <button type="submit" class="add-btn">Submit</button>
+</form>
+<br>
+
+</section>
+</body>
+
+</html>
+{% endblock %}
