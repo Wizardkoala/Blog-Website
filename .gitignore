@@ -1,0 +1,3 @@
+.env
+flask web/__pycache__/app.cpython-312.pyc
+flask web/instance
